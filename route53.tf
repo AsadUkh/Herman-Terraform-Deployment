@@ -12,5 +12,5 @@ resource "aws_route53_record" "www-marklogic-enterprise-api-elb" {
 
 
 resource "aws_route53_zone" "primary" {
-  name = "mehreenasad.com"
+  name = "herman-testing.com"
 }

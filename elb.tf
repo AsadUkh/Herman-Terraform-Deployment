@@ -2,11 +2,11 @@ resource "aws_elb" "marklogic-enterprise-api-elb" {
   name               = "marklogic-enterprise-api-elb"
   availability_zones = ["us-west-2a", "us-west-2b", "us-west-2c"]
 
-  # access_logs {
-  #   bucket        = "marklogic-enterprise-api-elb-bucket"
-  #   //bucket_prefix = "bar"
-  #   interval      = 60
-  # }
+  access_logs {
+    bucket        = "marklogic-enterprise-api-elb-bucket"
+    //bucket_prefix = "bar"
+    interval      = 60
+  }
 
   listener {
     instance_port     = 80
@@ -46,11 +46,11 @@ resource "aws_elb" "marklogic-https-elb" {
   name               = "marklogic-https-elb"
   availability_zones = ["us-west-2a", "us-west-2b", "us-west-2c"]
 
-  # access_logs {
-  #   bucket        = "marklogic-https-elb-bucket"
-  # //  bucket_prefix = "bar"
-  #   interval      = 60
-  # }
+  access_logs {
+    bucket        = "marklogic-https-elb-bucket" 
+  //  bucket_prefix = "bar"
+    interval      = 60
+  }
 
   listener {
     instance_port     = 8000

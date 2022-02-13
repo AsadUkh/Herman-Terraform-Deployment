@@ -5,3 +5,8 @@ variable "lambda_function_name" {
 variable "ca_verify" {
     default = "1"
 }
+
+variable "aws_region" {
+  default = "us-west-2"
+}
+
